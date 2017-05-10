@@ -1,28 +1,28 @@
 # HackingMassScorekeeper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hacking_mass_scorekeeper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Do you play [HACKING MASS] at [Baseball Prospectus] with a group of friends?
+Do you find yourself paging through the standings trying to figure out how your
+group is doing relative to one another? You might find this gem useful!
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'hacking_mass_scorekeeper'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install hacking_mass_scorekeeper
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+teams = {
+  "Ralph" => "BIG GAME JAMES",
+  "Suzy" => "Nomar Mr. Nice Guy"
+}
+
+HackingMassScorekeeper::Standings.new(teams).pretty_list
+```
+
+You'll get a listing of the teams. If you want to do your own formatting, use
+`#list` instead and get an array of hashes.
 
 ## Development
 
@@ -32,10 +32,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hacking_mass_scorekeeper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/geoffharcourt/hacking_mass_scorekeeper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+[HACKING MASS]: http://www.baseballprospectus.com/hm/index.php
+[Baseball Prospectus]: http://www.baseballprospectus.com/

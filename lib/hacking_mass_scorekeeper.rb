@@ -43,11 +43,11 @@ module HackingMassScorekeeper
     end
 
     def standings_table
-			Nokogiri::HTML(bp_page).css("table")[5]
+      Nokogiri::HTML(bp_page).css("table")[5]
     end
 
     def bp_page
       HTTParty.get(RESULTS_URL).body
-		end
+    end
   end
 end
